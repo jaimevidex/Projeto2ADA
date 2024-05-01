@@ -27,5 +27,4 @@ public class Main {
         }
     }
 }
-// IF WE WANT TO USE THE HASBEAM AS AN ARRAY
-/*  */
+/**/

@@ -1,17 +1,25 @@
-public class RobotEscapeSystem {
-    private int length;
-    private int width;
-    private int robotDiameter;
-    private int[] hasBeamArray;
+import java.util.LinkedList;
 
-    public RobotEscapeSystem(int length, int width, int robotDiameter, int[] hasBeamArray) {
-        this.length = length;
+public class RobotEscapeSystem {
+
+    private int width;
+    private int length;
+    private int robotDiameter;
+    LinkedList<Integer>[] graph;
+
+    public RobotEscapeSystem(int width, int length, int robotDiameter, int[] hasBeam) {
         this.width = width;
+        this.length = length;
         this.robotDiameter = robotDiameter;
-        this.hasBeamArray = hasBeamArray;
+        createGraph(hasBeam);
     }
 
+    private void createGraph(int[] hasBeam) {
+
+    }
+
+
     public boolean escape() {
-        return true;
+        return false;
     }
 }
