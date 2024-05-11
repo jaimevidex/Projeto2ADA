@@ -38,7 +38,7 @@ public class UnionFindInArray implements UnionFind {
     // the specified element.
     //
     // Without side effects - Recursive.
-    public int find( int element ) throws InvalidElementException {
+    /*public int find( int element ) throws InvalidElementException {
         if ( !this.isInTheDomain(element) )
             throw new InvalidElementException(validRangeMsg);
 
@@ -52,7 +52,7 @@ public class UnionFindInArray implements UnionFind {
             return element;
 
         return this.findRec( partition[element] );
-    }
+    }*/
 
 
     // Returns the representative of the set that contains 
@@ -74,23 +74,23 @@ public class UnionFindInArray implements UnionFind {
     // the specified element.
     //
     // With path compression.
-    /*public int find( int element ) throws InvalidElementException {
+    public int find( int element ) throws InvalidElementException {
         if ( !this.isInTheDomain(element) )
             throw new InvalidElementException(validRangeMsg);
 
         return this.findPathCompr(element);
-    }*/
+    }
 
 
     // Pre-condition: 0 <= element < partition.length.
-    /*protected int findPathCompr( int element ) {
+    protected int findPathCompr( int element ) {
         if ( partition[element] < 0 )
             return element;
 
         int root = this.findPathCompr( partition[element] );
         partition[element] = root;
         return root;
-    }*/
+    }
 
 
     // Removes the two distinct sets S1 and S2 whose representatives are 
@@ -98,7 +98,7 @@ public class UnionFindInArray implements UnionFind {
     // The representative of the new set S1 U S2 can be any of its members.
     //
     // Union by size.
-    public void union( int rep1, int rep2 ) throws InvalidElementException, 
+   /*public void union( int rep1, int rep2 ) throws InvalidElementException,
         NotRepresentativeException, EqualSetsException {  
         if ( !this.isInTheDomain(rep1) || !this.isInTheDomain(rep2) )
             throw new InvalidElementException(validRangeMsg);
@@ -119,7 +119,7 @@ public class UnionFindInArray implements UnionFind {
             partition[rep2] += partition[rep1];
             partition[rep1] = rep2;
         }
-    }
+    }*/
 
 
     // Removes the two distinct sets S1 and S2 whose representatives are 
@@ -127,7 +127,7 @@ public class UnionFindInArray implements UnionFind {
     // The representative of the new set S1 U S2 can be any of its members.
     //
     // Union by height or by rank.
-    /*public void union( int rep1, int rep2 ) throws InvalidElementException,
+    public void union( int rep1, int rep2 ) throws InvalidElementException,
         NotRepresentativeException, EqualSetsException {  
         if ( !this.isInTheDomain(rep1) || !this.isInTheDomain(rep2) )
             throw new InvalidElementException(validRangeMsg);
@@ -147,28 +147,5 @@ public class UnionFindInArray implements UnionFind {
         else
             // Height(S1) < Height(S2).
             partition[rep1] = rep2;
-    }*/
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
