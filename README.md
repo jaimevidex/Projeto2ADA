@@ -1,8 +1,7 @@
-# Projeto2ADA — Can Rob Escape?
+# Can Rob Escape?
 
 A computational-geometry puzzle solved with **union-find**: given a rectangular room and a set of circular beams, can a robot of a given diameter squeeze out without touching anything?
 
-Written in Java for the *Análise e Desenho de Algoritmos* course at Instituto Superior Técnico.
 
 ## The idea
 
@@ -63,4 +62,4 @@ The program reads from standard input.
 | `src/UnionFind/UnionFind.java` | Union-find interface |
 | `src/UnionFind/UnionFindInArray.java` | Array-backed implementation with path compression |
 | `src/UnionFind/*Exception.java` | Domain exceptions for invalid operations |
-| `Can Rob Escape.pdf` | Original assignment statement |
+| `problem-statement.pdf` | Problem statement |
